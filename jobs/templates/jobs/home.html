@@ -44,7 +44,7 @@
     <div class="navbar-nav ml-auto">
       <a href="https://www.linkedin.com/in/shubham-khulbe-490766128/" class="nav-item nav-link" href="#">LinkedIn</a>
       <a class="nav-item nav-link" href="#">Resume</a>
-      <a class="nav-item nav-link" href="#">Blog</a>
+      <a class="nav-item nav-link" href="blog">Blog</a>
     </div>
   </div>
 </nav>
@@ -55,7 +55,7 @@
   <section class="jumbotron text-center">
     <div class="container">
       <h1 class="jumbotron-heading">Hi, I'm Shubham Khulbe</h1>
-      <p class="lead text-muted">I love to code and have recently started learning web development and love how Django make things easier.</p>
+      <p class="lead text-muted">I love to code and have recently started learning web development and I love how Django make things easier.</p>
       <p>
         <a href="mailto:shubham.khulbe@gmail.com" class="btn btn-primary my-2">Email Me</a>
       </p>
@@ -64,18 +64,66 @@
 
   <div class="album py-5 bg-light">
     <div class="container">
-      <div class="row">
-          {% for job in jobs.all %}
+
+      <div class="card-deck">
+        <!-- jobs with for loop to access all the jobs in db
+        {% for job in jobs.all %}
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" width="100%" height="225" src="{{ job.image.url}}"</img>
+            <img class="card-img-top" width="100%" height="200" src="{{ job.image.url }}"</img>
             <div class="card-body">
               <p class="card-text">{{ job.summary }}</p>
             </div>
           </div>
         </div>
          {% endfor %}
+      -->
+
+
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" width="100%" height="200" src="/media/image/DAL.jpg"</img>
+            <div class="card-body">
+              <p class="card-text">-Helping students to get through their coding assignments and daily work.
+                  <br/>-Marking daily quizzes and weekly coding assignments.
+                  <br/>-Helping students get familiar with new platforms like GITHUB, Jupyter Notebook etc.
+                  <br/>-Helping students work in Linux environment.
+
+              </p>
+            </div>
+          </div>
+
+
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" width="100%" height="200" src="/media/image/MC.jpg"</img>
+            <div class="card-body">
+              <p class="card-text">-Worked as a technical support engineer on financial mobile wallet called “Mobiquity”.
+                                   <br/> -Managing databases for various clients. Troubleshooting technical issues related to mobile wallet transactions.
+                                    <br/>-Troubleshooting network issues, managing load balancers.
+                                    <br/>-Deployment of upgraded patches on the live environment with minimal or no downtime.
+                                    <br/>-Managing and deploying new tomcat servers for new clients.
+                                    <br/>-Managing users and their privileges.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" width="100%" height="200" src="{{ job.image.url }}"</img>
+            <div class="card-body">
+              <p class="card-text">-Performed system administration activities installation, system monitoring, troubleshooting on RHEL 5 and 6
+                                  <br/>-Installed and configured DNS, DHCP servers and assigning Addresses to client hosts.
+                                  <br/>-CRON and Rsyslog backup scheduling and maintenance, user/group and files administration, application server deployments (Apache, Nginx), databases (MySQL, Maria DB).
+                                  <br/>-Configured and managed network interfaces bonds and bridges.
+                                  <br/>-Installed and Configured Linux clusters for High Availability, failover & redundancy
+                                  <br/>-Configured FTP server to maintain the shared folders in the Organization
+                                  <br/>-Created physical volumes, volume groups and managed logical volumes
+                                  <br/>-Created Users & group’s oracle, MySQL, file Systems as per database requirement.
+              </p>
+            </div>
+          </div>
+
       </div>
+        </div>
     </div>
   </div>
 
