@@ -25,7 +25,7 @@ SECRET_KEY = '0$ienmtz7kdyqu49r8(yi7v7n)!z270cw7#^23ojo_%8q!dpb3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-portfolio.jhwq7zgn8t.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
@@ -123,7 +123,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'portfolio_web/static/')
+]
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

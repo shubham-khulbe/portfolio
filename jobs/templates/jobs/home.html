@@ -1,13 +1,14 @@
 
 <!doctype html>
 <html lang="en">
+    {% load staticfiles %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Album example · Bootstrap</title>
+    <title>Shubham Khulbe</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -36,15 +37,15 @@
   <body>
     <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Shubham Khulbe</a>
+  <a class="navbar-brand" href="{% url 'home' %}">Shubham Khulbe</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
       <a href="https://www.linkedin.com/in/shubham-khulbe-490766128/" class="nav-item nav-link" href="#">LinkedIn</a>
-      <a class="nav-item nav-link" href="#">Resume</a>
-      <a class="nav-item nav-link" href="blog">Blog</a>
+      <a class="nav-item nav-link" href="{% static 'SHUBHAM KHULBE.pdf' %}">Resume</a>
+      <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
     </div>
   </div>
 </nav>
@@ -56,7 +57,9 @@
     <div class="container">
       <h1 class="jumbotron-heading">Hi, I'm Shubham Khulbe</h1>
       <p class="lead text-muted">I love to code and have recently started learning web development and I love how Django make things easier.</p>
-      <p>
+       <br/>
+        <img src="{% static 'SK.jpg' %}" height="400" width="300" />
+        <p>
         <a href="mailto:shubham.khulbe@gmail.com" class="btn btn-primary my-2">Email Me</a>
       </p>
     </div>
