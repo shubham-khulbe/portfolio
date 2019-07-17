@@ -25,7 +25,7 @@ SECRET_KEY = '0$ienmtz7kdyqu49r8(yi7v7n)!z270cw7#^23ojo_%8q!dpb3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://portfolio.exmt7x2wy6.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['http://portfolio.exmt7x2wy6.us-west-2.elasticbeanstalk.com','127.0.0.1']
 
 
 # Application definition
@@ -80,7 +80,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'portfolio',
-        'USER': 'postgres',
+        'USER': 'portfoliodb',
         'PASSWORD': 'Shubham@25',
         'HOST': 'localhost',
         'PORT': '5433',
@@ -149,6 +149,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
