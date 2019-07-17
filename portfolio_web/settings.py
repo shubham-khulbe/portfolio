@@ -25,7 +25,7 @@ SECRET_KEY = '0$ienmtz7kdyqu49r8(yi7v7n)!z270cw7#^23ojo_%8q!dpb3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-portfolio.jhwq7zgn8t.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['http://portfolio.exmt7x2wy6.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
@@ -75,17 +75,31 @@ WSGI_APPLICATION = 'portfolio_web.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfoliodb',
+        'NAME': 'portfolio',
         'USER': 'postgres',
         'PASSWORD': 'Shubham@25',
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': '5433',
     }
 }
 
+"""
+if 'RDS_HOSTNAME' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ['RDS_DB_NAME'],
+            'USER': os.environ['RDS_USERNAME'],
+            'PASSWORD': os.environ['RDS_PASSWORD'],
+            'HOST': os.environ['RDS_HOSTNAME'],
+            'PORT': os.environ['RDS_PORT'],
+        }
+    }
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
